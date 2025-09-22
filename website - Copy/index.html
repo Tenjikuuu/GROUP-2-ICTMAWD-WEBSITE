@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blvd Cafè</title>
+  <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image" href="image(circle).png">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="top-bar">
+      <!-- DMode toggle -->
+      <button id="toggleDark" class="icon-btn">
+        <span id="iconSun" class="hidden">☀️</span>
+        <span id="iconMoon">🌙</span>
+      </button>
+      <!-- Hamburger icon -->
+      <button id="toggleMenu" class="icon-btn mobile-only">☰</button>
+    </div>
+
+    <!-- Logo -->
+    <div class="logo-wrap">
+      <img id="logo" src="image(circle).png" alt="BLVD Cafe Logo" />
+    </div>
+
+    <!-- Location -->
+    <div class="location">Blvd Cafe, Dasma Bayan</div>
+
+    <!-- PC menu -->
+    <nav class="menu desktop-only">
+      <button class="btn primary">HOME</button>
+      <button class="btn">ABOUT</button>
+  <button class="btn">Home</button>
+  <button class="btn">Contact Us</button>
+  <a href="menu.html" class="btn primary">Menu</a>
+      <button class="btn">SERVICES</button>
+      <button class="btn">GALLERY</button>
+      <button class="btn">CONTACT</button>
+    </nav>
+
+    <!-- mobile dropdown -->
+    <div id="mobileMenu" class="menu mobile-only dropdown">
+      <button class="btn">HOME</button>
+      <button class="btn">ABOUT</button>
+      <button class="btn">MENU</button>
+      <button class="btn">SERVICES</button>
+      <button class="btn">GALLERY</button>
+      <button class="btn">CONTACT</button>
+    </div>
+
+    <!-- action buttons -->
+    <div class="actions">
+      <button class="btn primary">ORDER NOW</button>
+      <button class="btn primary">RESERVATIONS</button>
+      <button class="btn primary">CATERING</button>
+    </div>
+
+    <!-- contact info -->
+    <div class="contact">
+      <div class="underline">CONNECT WITH US</div>
+      <div>
+        <span>PHONE: </span>
+        <span class="highlight">(555) 123-4567</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- main section -->
+  <main>
+    <div class="main-wrap">
+      <!-- left -->
+      <div class="main-left">
+        <h1>
+          FRESH <br />
+          <span class="highlight">FLAVORS</span> DAILY
+        </h1>
+        <p>EXPERIENCE AUTHENTIC CUISINE IN A COZY ATMOSPHERE</p>
+        <div class="tagline">Made with love using <br /> the finest ingredients</div>
+        <div class="subtext">Dine-in • Takeout • Delivery Available</div>
+      </div>
+
+      <!-- right -->
+      <div class="main-right">
+        <div class="circle-img">
+          <img src="coffee.jpg"
+               alt="Delicious cafe food" />
+        </div>
+        <div class="dot dot-lg top-right"></div>
+        <div class="dot dot-md bottom-left"></div>
+        <div class="dot dot-sm mid-left"></div>
+      </div>
+    </div>
+  </main>
+  
+
+  <!-- JS -->
+<script>
+  const toggleDark = document.getElementById("toggleDark");
+  const html = document.documentElement;
+  const iconSun = document.getElementById("iconSun");
+  const iconMoon = document.getElementById("iconMoon");
+  const logo = document.getElementById("logo");
+  const toggleMenu = document.getElementById("toggleMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  // Load theme from localStorage on page load
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    html.classList.add("dark");
+    iconSun.classList.remove("hidden");
+    iconMoon.classList.add("hidden");
+    logo.src = "image(circle).png"; // dark logo
+  } else {
+    html.classList.remove("dark");
+    iconSun.classList.add("hidden");
+    iconMoon.classList.remove("hidden");
+    logo.src = "image(circle)L.png"; // light logo
+  }
+
+  // Dark mode toggle
+  toggleDark.addEventListener("click", () => {
+    html.classList.toggle("dark");
+    const darkMode = html.classList.contains("dark");
+
+    // Save preference in localStorage
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+
+    // Update icons
+    iconSun.classList.toggle("hidden", !darkMode);
+    iconMoon.classList.toggle("hidden", darkMode);
+
+    // Swap logo
+    logo.src = darkMode ? "image(circle).png" : "image(circle)L.png";
+  });
+
+  // Mobile menu toggle
+  toggleMenu.addEventListener("click", () => {
+    mobileMenu.classList.toggle("show");
+  });
+</script>
+</body>
+</html>
