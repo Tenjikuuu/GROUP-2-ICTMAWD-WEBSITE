@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blvd Cafè</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="icon" type="image/png" href="image(circle).png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <header class="sticky-header">
+    <div class="top-bar">
+      <div class="logo-wrap">
+        <img id="logo" src="image(circle).png" alt="BLVD Cafe Logo" />
+      </div>
+
+      <div class="location">Blvd Cafe, Zone 1, 8 Ramirez St, Dasmarinas, Philippines</div>
+
+      <nav class="main-nav desktop-only">
+        <ul class="menu-list">
+          <li><a href="#" class="btn primary">HOME</a></li>
+          <li><a href="#about" class="btn">ABOUT</a></li>
+          <li><a href="menu.html" class="btn">MENU</a></li>
+          <li><a href="#" class="btn">SERVICES</a></li>
+          <li><a href="#" class="btn">GALLERY</a></li>
+          <li><a href="#contact" class="btn">CONTACT</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-icons">
+        <button id="toggleDark" class="icon-btn" aria-label="Toggle dark mode">
+          <span id="iconSun" class="material-icons">light_mode</span>
+          <span id="iconMoon" class="material-icons">dark_mode</span>
+        </button>
+        <button id="toggleMenu" class="icon-btn mobile-only" aria-label="Toggle mobile menu">
+          <span class="material-icons">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="mobile-menu">
+      <nav>
+        <ul class="menu-list">
+          <li><a href="#" class="btn primary">HOME</a></li>
+          <li><a href="#about" class="btn">ABOUT</a></li>
+          <li><a href="menu.html" class="btn">MENU</a></li>
+          <li><a href="#" class="btn">SERVICES</a></li>
+          <li><a href="#" class="btn">GALLERY</a></li>
+          <li><a href="#contact" class="btn">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <address class="contact-info">
+      <span class="underline contact-text">CONNECT WITH US</span>
+      <div>
+        <span>PHONE: </span>
+        <span class="highlight">(555) 123-4567</span>
+      </div>
+    </address>
+  </header>
+
+  <main>
+    <section class="main-content-wrap">
+      <div class="main-content-left">
+        <h1 class="main-heading">
+          FRESH <br />
+          <span class="highlight flavors-text">FLAVORS</span> DAILY
+        </h1>
+        <p class="main-subheading">EXPERIENCE AUTHENTIC CUISINE IN A COZY ATMOSPHERE</p>
+        <p class="tagline">Made with love using <br /> the finest ingredients</p>
+        <p class="subtext">Dine-in • Takeout • Delivery Available</p>
+      </div>
+
+      <div class="main-content-right">
+        <div class="image-wrapper circle-img">
+          <img src="coffee.jpg" alt="Delicious cafe food" />
+        </div>
+        <div class="dot dot-lg dot-top-right"></div>
+        <div class="dot dot-md dot-bottom-left"></div>
+        <div class="dot dot-sm dot-mid-left"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2 class="title">About Us</h2>
+      <div class="about-content">
+        <div class="about-content-left">
+          <p>
+            Blvd Cafe is more than just a place to grab coffee—it's a community hub where passion for food and people collide. We've been serving the Dasmariñas community for over a decade, with a commitment to using fresh, locally-sourced ingredients to craft every dish.
+          </p>
+          <p>
+            Our cozy atmosphere and friendly staff make it the perfect spot for a morning coffee, a leisurely lunch, or an evening gathering with friends. We believe great food brings people together, and we're dedicated to making every visit a memorable one.
+          </p>
+        </div>
+        <div class="about-content-right">
+          <img src="https://placehold.co/400x300/f5deb3/000?text=About+Us+Image" alt="Blvd Cafe interior" style="width: 100%; border-radius: 8px;">
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2 class="title">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info-block">
+          <h3>Information</h3>
+          <p><strong>Phone:</strong> (555) 123-4567</p>
+          <p><strong>Email:</strong> info@blvdcafe.com</p>
+          <p><strong>Address:</strong> Blvd Cafe, Zone 1, 8 Ramirez St, Dasmarinas, Philippines</p>
+          <p><strong>Hours:</strong> Mon-Fri: 7am - 9pm | Sat-Sun: 8am - 10pm</p>
+        </div>
+        <div class="contact-map">
+          <h3>Find Us</h3>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1932.854395578638!2d120.93405648383644!3d14.32834051442715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d533e686cae3%3A0xccf1fc26b522a24b!2sBLVD%20Cafe!5e0!3m2!1sen!2sph!4v1758515680234!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const toggleDark = document.getElementById("toggleDark");
+    const html = document.documentElement;
+    const iconSun = document.getElementById("iconSun");
+    const iconMoon = document.getElementById("iconMoon");
+    const logo = document.getElementById("logo");
+    const toggleMenu = document.getElementById("toggleMenu");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    const logoLightSrc = "image(circle).png";
+    const logoDarkSrc = "image(circle).png";
+
+    const savedTheme = localStorage.getItem("theme");
+    const isDarkMode = savedTheme === "dark";
+
+    // Initial theme setup on page load
+    if (isDarkMode) {
+      html.classList.add("dark");
+    } else {
+      html.classList.remove("dark");
+    }
+    updateThemeUI(isDarkMode);
+
+    // Dark mode toggle handler
+    toggleDark.addEventListener("click", () => {
+      const isCurrentlyDark = html.classList.toggle("dark");
+      localStorage.setItem("theme", isCurrentlyDark ? "dark" : "light");
+      updateThemeUI(isCurrentlyDark);
+    });
+
+    // Mobile menu toggle handler
+    toggleMenu.addEventListener("click", () => {
+      mobileMenu.classList.toggle("show");
+    });
+
+    // Function to update UI based on theme
+    function updateThemeUI(isDark) {
+      iconSun.classList.toggle("hidden", isDark);
+      iconMoon.classList.toggle("hidden", !isDark);
+      // Removed logo source change as it's not needed with the CSS filter.
+      // logo.src = isDark ? logoDarkSrc : logoLightSrc;
+    }
+  </script>
+</body>
+</html>
