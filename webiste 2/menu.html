@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blvd Cafè Menu</title>
+  <link rel="stylesheet" href="menu.css" />
+  <link rel="icon" type="image" href="image(circle).png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <button id="goBack" class="icon-btn">
+        <span class="material-icons">arrow_back</span>
+      </button>
+
+      <button id="toggleDark" class="icon-btn">
+        <span id="iconSun" class="material-icons">light_mode</span>
+        <span id="iconMoon" class="material-icons">dark_mode</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu-container">
+    <div class="menu-section drinks">
+      <h2>Drinks</h2>
+      <div class="menu-grid">
+        <div class="menu-item-wrap">
+          <div class="menu-item"><span>Matcha</span><span class="price">$3</span></div>
+          <img src="matcha.jpg" alt="Matcha Drink" class="food-image">
+        </div>
+        <div class="menu-item-wrap">
+          <div class="menu-item"><span>Smoothies</span><span class="price">$4</span></div>
+        </div>
+        <div class="menu-item-wrap">
+          <div class="menu-item"><span>Espresso</span><span class="price">$2</span></div>
+        </div>
+        <div class="menu-item-wrap">
+          <div class="menu-item"><span>Latte</span><span class="price">$5</span></div>
+          <img src="latte.jpg" alt="Latte" class="food-image">
+        </div>
+        <div class="menu-item-wrap">
+          <div class="menu-item"><span>Milkshake</span><span class="price">$6</span></div>
+        </div>
+        <div class="menu-item-wrap">
+          <div class="menu-item"><span>Tea</span><span class="price">$3</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section snacks">
+      <h2>Snacks</h2>
+      <div class="menu-grid">
+        <div class="menu-item-wrap">
+          <div class="menu-item"><span>Fries</span><span class="price">$6</span></div>
+          <img src="fries.jpg" alt="Fries" class="food-image">
+        </div>
+        <div class="menu-item-wrap">
+          <div class="menu-item"><span>Muffin</span><span class="price">$3</span></div>
+        </div>
+        <div class="menu-item-wrap">
+          <div class="menu-item"><span>Sandwich</span><span class="price">$2</span></div>
+        </div>
+        <div class="menu-item-wrap">
+          <div class="menu-item"><span>Nachos</span><span class="price">$4</span></div>
+          <img src="nachos.jpg" alt="Nachos" class="food-image">
+        </div>
+        <div class="menu-item-wrap">
+          <div class="menu-item"><span>Pizza Slice</span><span class="price">$5</span></div>
+        </div>
+        <div class="menu-item-wrap">
+          <div class="menu-item"><span>Cookies</span><span class="price">$2</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const html = document.documentElement;
+      const toggleDark = document.getElementById('toggleDark');
+      const iconSun = document.getElementById('iconSun');
+      const iconMoon = document.getElementById('iconMoon');
+      const goBackBtn = document.getElementById('goBack');
+
+      // Initial theme setup on page load
+      const savedTheme = localStorage.getItem("theme");
+      const isDarkMode = savedTheme === "dark";
+      if (isDarkMode) {
+        html.classList.add("dark");
+      } else {
+        html.classList.remove("dark");
+      }
+      updateThemeUI(isDarkMode);
+
+      // Dark mode toggle handler
+      toggleDark.addEventListener('click', () => {
+        const isCurrentlyDark = html.classList.toggle('dark');
+        localStorage.setItem("theme", isCurrentlyDark ? "dark" : "light");
+        updateThemeUI(isCurrentlyDark);
+      });
+
+      // Function to update UI based on theme
+      function updateThemeUI(isDark) {
+        iconSun.classList.toggle("hidden", isDark);
+        iconMoon.classList.toggle("hidden", !isDark);
+      }
+
+      // Go back button handler
+      goBackBtn?.addEventListener('click', () => {
+        if (history.length > 1) {
+          history.back();
+        } else {
+          window.location.href = 'index.html';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
