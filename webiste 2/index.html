@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blvd Cafè</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/png" href="image(circle).png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header class="sticky-header">
+    <div class="top-bar">
+      <div class="logo-wrap">
+        <img id="logo" src="image(circle).png" alt="BLVD Cafe Logo" />
+      </div>
+
+      <div class="location desktop-only">Blvd Cafe, Zone 1, 8 Ramirez St, Dasmarinas, Philippines</div>
+
+      <nav class="main-nav desktop-only">
+        <ul class="menu-list">
+          <li><a href="#" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="menu.html" class="nav-link">Menu</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="btn-icon rounded-full">
+          <span class="material-icons" id="icon-sun">light_mode</span>
+          <span class="material-icons hidden" id="icon-moon">dark_mode</span>
+        </button>
+        <button id="loginBtn" class="btn btn-primary desktop-only">Log In</button>
+        <button id="toggleMenu" class="btn-icon rounded-full mobile-only">
+          <span class="material-icons">menu</span>
+        </button>
+      </div>
+    </div>
+    
+    <nav class="mobile-menu mobile-only">
+      <ul class="menu-list">
+        <li><a href="#" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="menu.html" class="nav-link">Menu</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><button id="loginBtnMobile" class="btn btn-primary">Log In</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content-container">
+        <div class="hero-content">
+          <h1>Experience the Best Coffee in Town</h1>
+          <p>A place where every sip tells a story. Join us for a unique coffee experience.</p>
+          <a href="menu.html" class="btn btn-primary">View Our Menu</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section-container">
+      <h2 class="section-title">Our Story</h2>
+      <div class="about-content">
+        <div class="about-image-wrap reveal-item">
+          <img src="https://placehold.co/600x400/36454F/f5deb3?text=Our+Story" alt="Cafe interior" class="about-image">
+        </div>
+        <div class="about-text-wrap reveal-item">
+          <p>Blvd Cafè was born from a passion for exceptional coffee and a desire to create a community hub. Our journey began with a simple idea: to serve great coffee in a warm, inviting space. We source our beans from the finest growers, ensuring every cup is a masterpiece of flavor. We believe in quality, sustainability, and the power of a good conversation over a perfectly brewed cup.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="section-container">
+      <h2 class="section-title">Our Gallery</h2>
+      <div class="grid-container">
+        <div class="gallery-card reveal-item">
+          <div class="card-image-overlay"></div>
+          <img src="https://placehold.co/400x300/f5deb3/36454F?text=Delicious+Coffee" alt="Delicious coffee">
+          <div class="card-content">
+            <h3>Freshly Brewed</h3>
+          </div>
+        </div>
+        <div class="gallery-card reveal-item">
+          <div class="card-image-overlay"></div>
+          <img src="https://placehold.co/400x300/f5deb3/36454F?text=Cafe+Interior" alt="Cafe interior">
+          <div class="card-content">
+            <h3>Cozy Ambiance</h3>
+          </div>
+        </div>
+        <div class="gallery-card reveal-item">
+          <div class="card-image-overlay"></div>
+          <img src="https://placehold.co/400x300/f5deb3/36454F?text=Pastries" alt="Pastries">
+          <div class="card-content">
+            <h3>Sweet Treats</h3>
+          </div>
+        </div>
+        <div class="gallery-card reveal-item">
+          <div class="card-image-overlay"></div>
+          <img src="https://placehold.co/400x300/f5deb3/36454F?text=Barista+at+Work" alt="Barista at work">
+          <div class="card-content">
+            <h3>Skilled Baristas</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section-container">
+      <h2 class="section-title">Contact Us</h2>
+      <div class="contact-grid">
+        <div class="contact-info-block reveal-item">
+          <h3>Get in Touch</h3>
+          <p><strong>Address:</strong> Blvd Cafe, Zone 1, 8 Ramirez St, Dasmarinas, Philippines</p>
+          <p><strong>Phone:</strong> (046) 416 0244</p>
+          <p><strong>Email:</strong> blvdcafe@example.com</p>
+        </div>
+        <div class="contact-map reveal-item">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15456.90382025745!2d120.9497558661858!3d14.30155252554707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d4c80b62d85b%3A0xe5a1d7f1c1f5d6f!2s8%20Ramirez%20St%2C%20Dasmarinas%2C%20Cavite%2C%20Philippines!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center p-4">
+    <p>© 2024 Blvd Cafè. All rights reserved.</p>
+  </footer>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">×</span>
+      <h3>Log In to Your Account</h3>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Log In</button>
+      </form>
+      <p class="signup-text">Don't have an account? <a href="Sign up.html">Sign Up</a></p>
+    </div>
+  </div>
+
+  <div id="messageBox"></div>
+
+  <script>
+    // Functions to get and set users from localStorage
+    function getUsers() {
+      const users = localStorage.getItem('users');
+      return users ? JSON.parse(users) : [];
+    }
+    
+    // Function to show a custom message box
+    function showMessage(message) {
+      const messageBox = document.getElementById('messageBox');
+      messageBox.textContent = message;
+      messageBox.style.display = 'block';
+      setTimeout(() => {
+        messageBox.style.display = 'none';
+      }, 3000);
+    }
+
+    // Get all necessary elements
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const html = document.documentElement;
+    const iconSun = document.getElementById("icon-sun");
+    const iconMoon = document.getElementById("icon-moon");
+    const toggleMenu = document.getElementById("toggleMenu");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const loginBtn = document.getElementById("loginBtn");
+    const loginBtnMobile = document.getElementById("loginBtnMobile");
+    const loginModal = document.getElementById("loginModal");
+    const closeBtn = document.querySelector(".close-btn");
+    const loginForm = document.getElementById("loginForm");
+    const revealItems = document.querySelectorAll('.reveal-item');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    // Apply saved theme on page load
+    const savedTheme = localStorage.getItem("theme");
+    const isDark = savedTheme === "dark";
+    if (isDark) {
+      html.classList.add("dark");
+      updateThemeUI(true);
+    } else {
+      updateThemeUI(false);
+    }
+    
+    // Theme toggle handler
+    themeToggleBtn.addEventListener("click", () => {
+      const isCurrentlyDark = html.classList.toggle("dark");
+      localStorage.setItem("theme", isCurrentlyDark ? "dark" : "light");
+      updateThemeUI(isCurrentlyDark);
+    });
+
+    // Mobile menu toggle handler
+    toggleMenu.addEventListener("click", () => {
+      mobileMenu.classList.toggle("show");
+    });
+    
+    // Login modal listeners
+    loginBtn.addEventListener("click", () => {
+      loginModal.style.display = "flex";
+    });
+    if (loginBtnMobile) {
+      loginBtnMobile.addEventListener("click", () => {
+        loginModal.style.display = "flex";
+      });
+    }
+
+    closeBtn.addEventListener("click", () => {
+      loginModal.style.display = "none";
+    });
+
+    loginModal.addEventListener('click', (e) => {
+      if (e.target === loginModal) {
+        loginModal.style.display = "none";
+      }
+    });
+
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = e.target.email.value;
+      const password = e.target.password.value;
+      
+      const usersDB = getUsers();
+      const user = usersDB.find(u => u.email === email && u.password === password);
+
+      if (user) {
+        showMessage("Login successful! Welcome.");
+        // In a real application, you would handle a successful login here.
+      } else {
+        showMessage("Login failed. Please check your email and password or sign up.");
+      }
+      
+      loginForm.reset();
+      loginModal.style.display = "none";
+    });
+
+    // Function to update UI based on theme
+    function updateThemeUI(isDark) {
+      if (isDark) {
+        iconSun.classList.add('hidden');
+        iconMoon.classList.remove('hidden');
+      } else {
+        iconSun.classList.remove('hidden');
+        iconMoon.classList.add('hidden');
+      }
+    }
+    
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    revealItems.forEach(item => {
+      observer.observe(item);
+    });
+
+    // Scroll to section logic and active link state
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section');
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.href.includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
+  </script>
+</body>
+</html>
