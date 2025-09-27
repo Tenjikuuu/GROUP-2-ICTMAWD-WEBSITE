@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Blvd Cafè Menu</title>
+  <link rel="stylesheet" href="menu.css" />
+  <link rel="icon" type="image" href="image(circle).png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <button id="goBack" class="icon-btn">
+        <span class="material-icons">arrow_back</span>
+      </button>
+
+      <button id="toggleDark" class="icon-btn">
+        <span id="iconSun" class="material-icons">light_mode</span>
+        <span id="iconMoon" class="material-icons hidden">dark_mode</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu-container">
+    <div class="menu-header">
+      <h1>Blvd Cafè</h1>
+      <p class="slogan">Crafting your perfect moment, one sip at a time.</p>
+    </div>
+
+    <div class="menu-grid-sections">
+      <div class="menu-section drinks" id="drinks-section">
+        <h2>Drinks</h2>
+        <div class="menu-items-list">
+          <div class="menu-item-card">
+            <img src="matcha.jpg" alt="Matcha Drink" class="menu-item-img">
+            <div class="item-info">
+              <span class="item-name">Matcha</span>
+              <span class="item-price">$3</span>
+            </div>
+            <p class="item-description">A vibrant, earthy green tea latte.</p>
+          </div>
+          <div class="menu-item-card">
+            <img src="smoothie.jpg" alt="Mixed Berry Smoothie" class="menu-item-img">
+            <div class="item-info">
+              <span class="item-name">Smoothies</span>
+              <span class="item-price">$4</span>
+            </div>
+            <p class="item-description">Refreshing fruit blends for a boost.</p>
+          </div>
+          <div class="menu-item-card">
+            <img src="espresso.jpg" alt="Espresso" class="menu-item-img">
+            <div class="item-info">
+              <span class="item-name">Espresso</span>
+              <span class="item-price">$2</span>
+            </div>
+            <p class="item-description">Bold and rich shot of our house blend.</p>
+          </div>
+          <div class="menu-item-card">
+            <img src="latte.jpg" alt="Latte" class="menu-item-img">
+            <div class="item-info">
+              <span class="item-name">Latte</span>
+              <span class="item-price">$5</span>
+            </div>
+            <p class="item-description">Smooth, steamed milk with a shot of espresso.</p>
+          </div>
+          <div class="menu-item-card">
+            <img src="milkshake.jpg" alt="Chocolate Milkshake" class="menu-item-img">
+            <div class="item-info">
+              <span class="item-name">Milkshake</span>
+              <span class="item-price">$6</span>
+            </div>
+            <p class="item-description">Creamy and indulgent classic dessert drink.</p>
+          </div>
+          <div class="menu-item-card">
+            <img src="tea.jpg" alt="Hot Tea" class="menu-item-img">
+            <div class="item-info">
+              <span class="item-name">Tea</span>
+              <span class="item-price">$3</span>
+            </div>
+            <p class="item-description">Selection of premium black and herbal teas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section snacks" id="snacks-section">
+        <h2>Snacks</h2>
+        <div class="menu-items-list">
+          <div class="menu-item-card">
+            <img src="fries.jpg" alt="Fries" class="menu-item-img">
+            <div class="item-info">
+              <span class="item-name">Fries</span>
+              <span class="item-price">$6</span>
+            </div>
+            <p class="item-description">Crispy golden fries with a hint of salt.</p>
+          </div>
+          <div class="menu-item-card">
+            <img src="muffin.jpg" alt="Blueberry Muffin" class="menu-item-img">
+            <div class="item-info">
+              <span class="item-name">Muffin</span>
+              <span class="item-price">$3</span>
+            </div>
+            <p class="item-description">Freshly baked, soft and fluffy muffins.</p>
+          </div>
+          <div class="menu-item-card">
+            <img src="sandwich.jpg" alt="Club Sandwich" class="menu-item-img">
+            <div class="item-info">
+              <span class="item-name">Sandwich</span>
+              <span class="item-price">$2</span>
+            </div>
+            <p class="item-description">Simple, fresh, and perfect for a light bite.</p>
+          </div>
+          <div class="menu-item-card">
+            <img src="nachos.jpg" alt="Nachos" class="menu-item-img">
+            <div class="item-info">
+              <span class="item-name">Nachos</span>
+              <span class="item-price">$4</span>
+            </div>
+            <p class="item-description">Crunchy tortilla chips with melted cheese.</p>
+          </div>
+          <div class="menu-item-card">
+            <img src="pizza.jpg" alt="Pizza Slice" class="menu-item-img">
+            <div class="item-info">
+              <span class="item-name">Pizza Slice</span>
+              <span class="item-price">$5</span>
+            </div>
+            <p class="item-description">A classic slice of cheesy goodness.</p>
+          </div>
+          <div class="menu-item-card">
+            <img src="cookies.jpg" alt="Chocolate Chip Cookies" class="menu-item-img">
+            <div class="item-info">
+              <span class="item-name">Cookies</span>
+              <span class="item-price">$2</span>
+            </div>
+            <p class="item-description">Warm, chewy, and full of chocolate chips.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const html = document.documentElement;
+      const toggleDark = document.getElementById('toggleDark');
+      const iconSun = document.getElementById('iconSun');
+      const iconMoon = document.getElementById('iconMoon');
+      const goBackBtn = document.getElementById('goBack');
+      const menuSections = document.querySelectorAll('.menu-section');
+
+      // Initial theme setup on page load
+      const savedTheme = localStorage.getItem("theme");
+      const isDarkMode = savedTheme === "dark";
+      if (isDarkMode) {
+        html.classList.add("dark");
+      }
+      updateThemeUI(isDarkMode);
+
+      // Dark mode toggle handler
+      toggleDark.addEventListener('click', () => {
+        const isCurrentlyDark = html.classList.toggle('dark');
+        localStorage.setItem("theme", isCurrentlyDark ? "dark" : "light");
+        updateThemeUI(isCurrentlyDark);
+      });
+
+      // Function to update UI based on theme
+      function updateThemeUI(isDark) {
+        iconSun.classList.toggle("hidden", isDark);
+        iconMoon.classList.toggle("hidden", !isDark);
+      }
+
+      // Go back button handler
+      goBackBtn?.addEventListener('click', () => {
+        if (history.length > 1) {
+          history.back();
+        } else {
+          window.location.href = 'index.html';
+        }
+      });
+      
+      // Animate sections on scroll
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      menuSections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+</body>
+</html>

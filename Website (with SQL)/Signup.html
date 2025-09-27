@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Blvd Cafè</title>
+    <link rel="stylesheet" href="Sign up.css">
+</head>
+<body class="center-content">
+    <div class="signup-container">
+        <a href="index.html" class="back-link">&larr; Back to Home</a>
+        <div class="form-card">
+            <h2>Create Your Account</h2>
+            <form id="signupForm" action="signupdb.php" method="post">
+                <label for="newUsername">Username:</label>
+                <input type="text" id="newUsername" name="username" required placeholder="Enter username">
+
+                <label for="newEmail">Email:</label>
+                <input type="email" id="newEmail" name="email" required placeholder="Enter email">
+
+                <label for="newPassword">Password:</label>
+                <input type="password" id="newPassword" name="password" required placeholder="Enter password">
+
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="Confirm password">
+
+                <label for="role">Role:</label>
+                <select id="role" name="role" required>
+                    <option value="customer" selected>Customer</option>
+                    <option value="admin">Admin</option>
+                </select>
+
+                <div id="adminKeyContainer" class="admin-key-container">
+                    <label for="adminkey">Admin Key (only for admins):</label>
+                    <input type="password" id="adminkey" name="adminkey" placeholder="Enter admin key">
+                </div>
+
+                <button type="submit" class="btn primary">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="index.html">Log In</a></p>
+        </div>
+    </div>
+
+ <script>
+const roleSelect = document.getElementById('role');
+const adminKeyContainer = document.getElementById('adminKeyContainer');
+
+roleSelect.addEventListener('change', function() {
+    if (this.value === 'admin') {
+        adminKeyContainer.classList.add('show');
+    } else {
+        adminKeyContainer.classList.remove('show');
+    }
+});
+</script>
+
+</body>
+</html>
+

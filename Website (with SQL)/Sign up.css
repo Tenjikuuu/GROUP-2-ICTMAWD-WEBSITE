@@ -1,0 +1,160 @@
+:root {
+  --color-primary: #36454F;
+  --color-secondary: #f5deb3;
+  --color-text-light: #222;
+  --color-text-dark: #eee;
+  --color-background-light: #fff;
+  --color-background-dark: #0a0a0a;
+  --color-button-light: #ddd;
+  --color-button-dark: #111;
+  --color-border-light: #36454F;
+  --color-border-dark: #f5deb3;
+  --transition-speed: 0.4s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all var(--transition-speed);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-background-light);
+  color: var(--color-text-light);
+  scroll-behavior: smooth;
+}
+
+.dark {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-dark);
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.signup-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+  max-width: 400px;
+}
+
+.back-link {
+  text-decoration: none;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  align-self: flex-start;
+}
+
+.form-card {
+  padding: 2rem;
+  background-color: var(--color-background-light);
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.dark .form-card {
+  background-color: var(--color-background-dark);
+  border-color: var(--color-border-dark);
+  color: var(--color-text-dark);
+}
+
+.form-card h2 {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.dark .form-card h2 {
+  color: var(--color-secondary);
+}
+
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.form-card input,
+.form-card select {
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid var(--color-border-light);
+  border-radius: 4px;
+  background-color: var(--color-button-light);
+  color: var(--color-text-light);
+  font-size: 1rem;
+}
+
+.dark .form-card input,
+.dark .form-card select {
+  background-color: var(--color-button-dark);
+  border-color: var(--color-border-dark);
+  color: var(--color-text-dark);
+}
+
+.form-card button {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--color-primary);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-card button:hover {
+  background-color: #2f3d46;
+}
+
+.form-card p {
+  margin-top: 1rem;
+}
+
+.form-card p a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+
+#adminKeyContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+}
+
+#adminKeyContainer.show {
+  max-height: 100px;
+  opacity: 1;
+}
+
+#adminKeyContainer label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+#adminKeyContainer input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--color-border-light);
+  border-radius: 4px;
+  background-color: var(--color-button-light);
+  color: var(--color-text-light);
+}
+
+.dark #adminKeyContainer input {
+  background-color: var(--color-button-dark);
+  border-color: var(--color-border-dark);
+  color: var(--color-text-dark);
+}
